@@ -14,6 +14,12 @@
 ![](Demo/large-screen.png)
 <br/>
 <br/>
+![](Demo/rule.png)
+<br/>
+<br/>
+![](Demo/large-screen-win.png)
+<br/>
+<br/>
 
 <div align="center">
 <img src="Demo/small-screen.png" width="300">
