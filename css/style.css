@@ -1,0 +1,336 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: radial-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  border: transparent solid;
+}
+
+.score-box {
+  border: 4px solid #5a576a;
+  border-radius: 20px;
+  margin-top: 30px;
+  margin-left: 25%;
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 20px;
+}
+
+.text {
+  color: #e7e6e3;
+  font-family: "Barlow Semi Condensed", sans-serif;
+}
+
+.score {
+  background-color: #e7e6e3;
+  width: 20%;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  letter-spacing: 2px;
+  font-size: 20px;
+  font-weight: 700;
+  color: hsl(214, 47%, 23%);
+}
+
+#score-number {
+  font-weight: 800;
+  color: #5a576a;
+}
+
+/* game part */
+
+#game {
+  margin-left: 25%;
+  width: 50%;
+  height: 50%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#rock,
+#paper,
+#scissors {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #e4e4e7;
+  cursor: pointer;
+  transition: all 0.4s ease-in;
+}
+
+#rock:hover,
+#paper:hover,
+#scissors:hover {
+  transform: scale(1.1);
+}
+
+#paper {
+  border: 20px solid hsl(230, 89%, 65%);
+}
+
+#rock {
+  border: 20px solid hsl(349, 70%, 56%);
+}
+
+#scissors {
+  border: 20px solid hsl(40, 84%, 53%);
+}
+
+#ruleBtn {
+  padding: 10px 30px;
+  background: transparent;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  color: #fff;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  float: right;
+  margin-right: 50px;
+  letter-spacing: 3px;
+  transition: all 0.4s linear;
+  cursor: pointer;
+}
+
+#ruleBtn:hover {
+  border: 1px solid rgb(127, 125, 134);
+  color: rgb(127, 125, 134);
+}
+
+#rules-box {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #00000081;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+}
+
+#rules-box div {
+  background-color: antiquewhite;
+  padding: 40px;
+  border-radius: 20px;
+}
+
+#rules-box div h1 {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  color: hsl(214, 47%, 23%);
+  margin-bottom: 40px;
+}
+
+#close-rule {
+  float: right;
+  cursor: pointer;
+}
+
+#close-rule:hover {
+  color: rgb(127, 125, 134);
+}
+
+/* selection */
+
+#selection {
+  margin-left: 25%;
+  width: 50%;
+  height: 50%;
+  display: none;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#selection div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.rock,
+.paper,
+.scissors {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #e4e4e7;
+}
+
+.paper {
+  border: 20px solid hsl(230, 89%, 65%);
+}
+
+.rock {
+  border: 20px solid hsl(349, 70%, 56%);
+}
+
+.scissors {
+  border: 20px solid hsl(40, 84%, 53%);
+}
+
+.picked {
+  color: #e7e6e3;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-size: 1.3rem;
+  text-align: center;
+  letter-spacing: 2px;
+  margin-bottom: 40px;
+}
+
+.resultText {
+  color: #e7e6e3;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-size: 2rem;
+  text-align: center;
+}
+
+#playAgain {
+  margin-top: 20px;
+  padding: 10px 30px;
+  background: #e4e4e7;
+  border: none;
+  border-radius: 10px;
+  color: hsl(237, 49%, 15%);
+  font-family: "Barlow Semi Condensed", sans-serif;
+  letter-spacing: 3px;
+  transition: all 0.4s linear;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+#playAgain:hover {
+  background: #e4e4e7a8;
+}
+
+/* responsive for all device */
+
+@media all and (max-width: 1200px) {
+  .score-box,
+  #game,
+  #selection {
+    width: 80%;
+    margin-left: 10%;
+  }
+}
+
+@media all and (max-width: 670px) {
+  .score-box,
+  #game,
+  #selection {
+    width: 94%;
+    margin-left: 3%;
+  }
+
+  .score {
+    width: 40%;
+  }
+
+  #rock,
+  #paper,
+  #scissors {
+    width: 120px;
+    height: 120px;
+    cursor: default;
+  }
+
+  #paper {
+    border: 15px solid hsl(230, 89%, 65%);
+  }
+
+  #rock {
+    border: 15px solid hsl(349, 70%, 56%);
+  }
+
+  #scissors {
+    border: 15px solid hsl(40, 84%, 53%);
+  }
+
+  #ruleBtn {
+    cursor: default;
+  }
+
+  #close-rule {
+    cursor: default;
+  }
+
+  .rock,
+  .paper,
+  .scissors {
+    width: 100px;
+    height: 100px;
+    cursor: default;
+  }
+
+  .paper {
+    border: 10px solid hsl(230, 89%, 65%);
+  }
+
+  .rock {
+    border: 10px solid hsl(349, 70%, 56%);
+  }
+
+  .scissors {
+    border: 10px solid hsl(40, 84%, 53%);
+  }
+
+  .picked {
+    font-size: 1rem;
+    text-align: center;
+    letter-spacing: 1px;
+    margin-bottom: 40px;
+  }
+
+  .resultText {
+    font-size: 1rem;
+
+    margin-left: 10px;
+  }
+
+  #playAgain {
+    padding: 5px;
+    letter-spacing: 0;
+    cursor: default;
+    font-weight: 400;
+    font-size: 1rem;
+    border-radius: 8px;
+  }
+}
+
+@media all and (max-width: 400px) {
+  #rock,
+  #paper,
+  #scissors {
+    width: 100px;
+    height: 100px;
+  }
+
+  #paper {
+    border: 10px solid hsl(230, 89%, 65%);
+  }
+
+  #rock {
+    border: 10px solid hsl(349, 70%, 56%);
+  }
+
+  #scissors {
+    border: 10px solid hsl(40, 84%, 53%);
+  }
+}
