@@ -11,7 +11,7 @@ body {
 .container {
   width: 100vw;
   height: 100vh;
-  border: transparent solid;
+  border: 0.2px solid  hsla(238, 48%, 15%, 0.123);
 }
 
 .score-box {
