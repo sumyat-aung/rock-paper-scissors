@@ -1,3 +1,5 @@
+// I just add Reset feature (Han Lin)
+
 // Rules € pop up when user click
 
 const ruleBtn = document.getElementById("ruleBtn");
@@ -38,6 +40,13 @@ let gameArray = ["rock", "paper", "scissors"];
 // setting up the score
 let scoreNum = 0;
 score.textContent = scoreNum;
+
+//resetting the scorepoint
+const reset = document.getElementById("resetBtn");
+reset.onclick = () => {
+  scoreNum = 0
+  score.textContent = scoreNum;
+}
 
 // randomChoice for computer
 function randomChoice() {

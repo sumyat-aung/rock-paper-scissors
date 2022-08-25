@@ -92,7 +92,7 @@ body {
   border: 20px solid hsl(40, 84%, 53%);
 }
 
-#ruleBtn {
+.ruleBtn {
   padding: 10px 30px;
   background: transparent;
   border: 1px solid #fff;
@@ -106,7 +106,7 @@ body {
   cursor: pointer;
 }
 
-#ruleBtn:hover {
+.ruleBtn:hover {
   border: 1px solid rgb(127, 125, 134);
   color: rgb(127, 125, 134);
 }
